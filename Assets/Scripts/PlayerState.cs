@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -162,6 +163,14 @@ public class PlayerState : ScriptableObject
     {
         PlayerPrefs.SetInt("best", best);
         PlayerPrefs.SetInt("level", level);
+        PlayerPrefs.SetInt("vibrate", vibrate ? 1 : 0);
+    }
+
+    public void ResetSave()
+    {
+        score = 0;
+        PlayerPrefs.SetInt("best", 0);
+        PlayerPrefs.SetInt("level", 0);
         PlayerPrefs.SetInt("vibrate", vibrate ? 1 : 0);
     }
 

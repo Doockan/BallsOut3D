@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
@@ -37,6 +38,12 @@ public class GameMenu : MonoBehaviour
         {
             button.anchoredPosition = new Vector2(184f, button.anchoredPosition.y);
         }
+    }
+
+    public void NewGame()
+    {
+        playerState.ResetSave();
+        SceneManager.LoadScene(1);
     }
 
     public void SwitchSettings()
@@ -82,7 +89,7 @@ public class GameMenu : MonoBehaviour
         playerState.ChangeMusic(v == 1);
     }
 
-    void UpdateVibrate()
+    void   UpdateVibrate()
     {
         vibrateImage.sprite = playerState.vibrate ? vibrateOnIcon : vibrateOffIcon;
     }
