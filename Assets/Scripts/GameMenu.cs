@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
@@ -49,9 +47,12 @@ public class GameMenu : MonoBehaviour
     public void SwitchSettings()
     {
         settingsExpand = !settingsExpand;
-        foreach(var button in settingsButtons)
+        foreach (var button in settingsButtons)
         {
-            DOTween.To(()=>button.anchoredPosition, x => button.anchoredPosition = x, settingsExpand ? new Vector2(-184f, button.anchoredPosition.y) : new Vector2(184f, button.anchoredPosition.y), 0.3f);
+            DOTween.To(() => button.anchoredPosition, x => button.anchoredPosition = x,
+                settingsExpand
+                    ? new Vector2(-184f, button.anchoredPosition.y)
+                    : new Vector2(184f, button.anchoredPosition.y), 0.3f);
         }
 
         UpdateVibrate();
@@ -63,10 +64,8 @@ public class GameMenu : MonoBehaviour
         playerState.vibrate = !playerState.vibrate;
         playerState.Save();
 
-        
 
         UpdateVibrate();
-
     }
 
     public void SwitchSound()
@@ -89,7 +88,7 @@ public class GameMenu : MonoBehaviour
         playerState.ChangeMusic(v == 1);
     }
 
-    void   UpdateVibrate()
+    void UpdateVibrate()
     {
         vibrateImage.sprite = playerState.vibrate ? vibrateOnIcon : vibrateOffIcon;
     }
