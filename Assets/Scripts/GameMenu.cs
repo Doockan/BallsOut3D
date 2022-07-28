@@ -38,12 +38,6 @@ public class GameMenu : MonoBehaviour
         }
     }
 
-    public void NewGame()
-    {
-        playerState.ResetSave();
-        SceneManager.LoadScene(1);
-    }
-
     public void SwitchSettings()
     {
         settingsExpand = !settingsExpand;
