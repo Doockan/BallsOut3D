@@ -385,8 +385,10 @@ public class Level : MonoBehaviour, IWaveObserver, ILevelObserver, ICaptureBallO
                 if (ballSize < 7 || !hasDifferentBalls) ballSize = 0;
                 else if (ballSize < 9) ballSize = 1;
                 else if (ballSize < 10) ballSize = 2;
+                if (playerState.level == 1) ballSize = 3;
+                if (playerState.level == 9) ballSize = 4;
                 if (count >= max) continue;
-                var ball = Instantiate(ballSize == 2 ? gameConfig.ballBig : ballSize == 1 ? gameConfig.ballMid : gameConfig.ball, newLab.transform);
+                var ball = Instantiate(ballSize == 4? gameConfig.ballWater : ballSize == 3 ? gameConfig.ballPear : ballSize == 2 ? gameConfig.ballBig : ballSize == 1 ? gameConfig.ballMid : gameConfig.ball, newLab.transform);
                 ball.transform.localPosition = Vector3.right * (j % sq - sq / 2) * 0.1f + Vector3.down * (j / sq - sq / 2) * 0.1f + Vector3.forward * d * 0.1f;
 
                 var scale = RemoteSettings.GetFloat(ballSize == 0 ? "ballSize0" : ballSize == 1 ? "ballSize1" : "ballSize2", 1f);

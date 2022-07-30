@@ -10050,6 +10050,11 @@ PrefabInstance:
       propertyPath: m_Shadows.m_Resolution
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 7516344627374987622, guid: d373d5c5730ca974199857fe0e72a878,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 4e-45
+      objectReference: {fileID: 0}
     - target: {fileID: 7516344627374987623, guid: d373d5c5730ca974199857fe0e72a878,
         type: 3}
       propertyPath: m_LocalRotation.x

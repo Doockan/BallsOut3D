@@ -21,7 +21,7 @@ MonoBehaviour:
   - Assets/Resources/Prefabs/Labyrinth_tutorial 30.prefab
   - Assets/Resources/Prefabs/Labyrinth_tutorial 31.prefab
   - Assets/Resources/Prefabs/Labyrinth_tutorial 32.prefab
-  - Assets/Resources/Prefabs/Fruits/Labyrinth_apple.prefab
+  - Assets/Resources/Prefabs/Fruits/Labyrinth_antnest.prefab
   - Assets/Resources/Prefabs/Labyrinth_tutorial_gen_1.prefab
   - Assets/Resources/Prefabs/Labyrinth_tutorial_gen_2.prefab
   - Assets/Resources/Prefabs/Labyrinth_tutorial_gen_3.prefab
@@ -148,6 +148,10 @@ MonoBehaviour:
   ball: {fileID: 4803738439568453723, guid: ef7f45f562fed4940b8d891a8ea3dc88, type: 3}
   ballBig: {fileID: 4803738439568453723, guid: b7516d6d81dd31c44af5ec7ddbb50a19, type: 3}
   ballMid: {fileID: 4803738439568453723, guid: 6e1e1ab17a5d0ca49aabbbb775f4175e, type: 3}
+  ballPear: {fileID: -9083750862173337002, guid: 58281e0316ac0bb4890baddc42a3df60,
+    type: 3}
+  ballWater: {fileID: 4803738439568453723, guid: 40de8a6088817ad408438db5e48b9c4a,
+    type: 3}
   wavesCount: 3
   backgroundsStr:
   - Assets/Resources/Textures/BG1.png
